@@ -7,19 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40C30FF626F867A80017AC5E /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C30FF526F867A80017AC5E /* ScoreView.swift */; };
+		40E4FBD026F30D2900C5BD90 /* helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E4FBCF26F30D2900C5BD90 /* helper.swift */; };
+		40E4FBD226F5B80B00C5BD90 /* StarShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E4FBD126F5B80B00C5BD90 /* StarShape.swift */; };
+		40E4FBD426F5C22E00C5BD90 /* MenuLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E4FBD326F5C22E00C5BD90 /* MenuLogoView.swift */; };
 		40E5232826E6565800A75201 /* Game_2048App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E5232726E6565800A75201 /* Game_2048App.swift */; };
 		40E5232A26E6565800A75201 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E5232926E6565800A75201 /* ContentView.swift */; };
 		40E5232C26E6566700A75201 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40E5232B26E6566700A75201 /* Assets.xcassets */; };
 		40E5232F26E6566700A75201 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40E5232E26E6566700A75201 /* Preview Assets.xcassets */; };
+		40E5233826E6597F00A75201 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E5233726E6597F00A75201 /* GameView.swift */; };
+		40E5233A26E7365400A75201 /* BlockGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E5233926E7365400A75201 /* BlockGridView.swift */; };
+		40E5233C26E736F500A75201 /* BlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E5233B26E736F500A75201 /* BlockView.swift */; };
+		40E5233F26E761C900A75201 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E5233E26E761C900A75201 /* GameLogic.swift */; };
+		40E5234226E864A000A75201 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E5234126E864A000A75201 /* extension.swift */; };
+		40E5234426ECF4BF00A75201 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E5234326ECF4B600A75201 /* TestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		40C30FF526F867A80017AC5E /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
+		40E4FBCF26F30D2900C5BD90 /* helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helper.swift; sourceTree = "<group>"; };
+		40E4FBD126F5B80B00C5BD90 /* StarShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarShape.swift; sourceTree = "<group>"; };
+		40E4FBD326F5C22E00C5BD90 /* MenuLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuLogoView.swift; sourceTree = "<group>"; };
 		40E5232426E6565700A75201 /* Game-2048.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game-2048.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40E5232726E6565800A75201 /* Game_2048App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game_2048App.swift; sourceTree = "<group>"; };
 		40E5232926E6565800A75201 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		40E5232B26E6566700A75201 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40E5232E26E6566700A75201 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		40E5233026E6566700A75201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40E5233726E6597F00A75201 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		40E5233926E7365400A75201 /* BlockGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockGridView.swift; sourceTree = "<group>"; };
+		40E5233B26E736F500A75201 /* BlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockView.swift; sourceTree = "<group>"; };
+		40E5233E26E761C900A75201 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
+		40E5234126E864A000A75201 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
+		40E5234326ECF4B600A75201 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +72,10 @@
 		40E5232626E6565700A75201 /* Game-2048 */ = {
 			isa = PBXGroup;
 			children = (
+				40E5234026E8647E00A75201 /* Helper */,
+				40E5233D26E75DE200A75201 /* Model */,
+				40E5233626E6595700A75201 /* Views */,
 				40E5232726E6565800A75201 /* Game_2048App.swift */,
-				40E5232926E6565800A75201 /* ContentView.swift */,
 				40E5232B26E6566700A75201 /* Assets.xcassets */,
 				40E5233026E6566700A75201 /* Info.plist */,
 				40E5232D26E6566700A75201 /* Preview Content */,
@@ -67,6 +89,38 @@
 				40E5232E26E6566700A75201 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		40E5233626E6595700A75201 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				40E5232926E6565800A75201 /* ContentView.swift */,
+				40E5233726E6597F00A75201 /* GameView.swift */,
+				40E5233926E7365400A75201 /* BlockGridView.swift */,
+				40E5233B26E736F500A75201 /* BlockView.swift */,
+				40E5234326ECF4B600A75201 /* TestView.swift */,
+				40E4FBD126F5B80B00C5BD90 /* StarShape.swift */,
+				40E4FBD326F5C22E00C5BD90 /* MenuLogoView.swift */,
+				40C30FF526F867A80017AC5E /* ScoreView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		40E5233D26E75DE200A75201 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				40E5233E26E761C900A75201 /* GameLogic.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		40E5234026E8647E00A75201 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				40E5234126E864A000A75201 /* extension.swift */,
+				40E4FBCF26F30D2900C5BD90 /* helper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +192,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40E4FBD026F30D2900C5BD90 /* helper.swift in Sources */,
+				40E5233F26E761C900A75201 /* GameLogic.swift in Sources */,
+				40E5234226E864A000A75201 /* extension.swift in Sources */,
 				40E5232A26E6565800A75201 /* ContentView.swift in Sources */,
+				40E5233C26E736F500A75201 /* BlockView.swift in Sources */,
+				40C30FF626F867A80017AC5E /* ScoreView.swift in Sources */,
+				40E4FBD226F5B80B00C5BD90 /* StarShape.swift in Sources */,
+				40E5234426ECF4BF00A75201 /* TestView.swift in Sources */,
+				40E4FBD426F5C22E00C5BD90 /* MenuLogoView.swift in Sources */,
+				40E5233826E6597F00A75201 /* GameView.swift in Sources */,
+				40E5233A26E7365400A75201 /* BlockGridView.swift in Sources */,
 				40E5232826E6565800A75201 /* Game_2048App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
