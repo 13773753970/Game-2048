@@ -9,12 +9,12 @@ import SwiftUI
 
 @main
 struct Game_2048App: App {
-    @StateObject private var gameLogic = GameLogic()
+    @StateObject private var store: AppStore = createStore()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(gameLogic)
+                .environmentObject(store)
         }
     }
 }

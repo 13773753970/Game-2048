@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Redux",
+        "repositoryURL": "https://github.com/13773753970/SwiftRedux.git",
+        "state": {
+          "branch": "main",
+          "revision": "4c2bfa77a26cd50e186c51ffde6f77eef7ec0324",
+          "version": null
+        }
+      },
+      {
+        "package": "SwiftyBeaver",
+        "repositoryURL": "https://github.com/SwiftyBeaver/SwiftyBeaver.git",
+        "state": {
+          "branch": null,
+          "revision": "2c039501d6eeb4d4cd4aec4a8d884ad28862e044",
+          "version": "1.9.5"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

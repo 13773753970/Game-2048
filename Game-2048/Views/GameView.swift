@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GameView: View {
-    @EnvironmentObject var gameLogic: GameLogic
+    @EnvironmentObject var store: AppStore
     
     var content: some View {
         GeometryReader { proxy in
@@ -16,7 +16,7 @@ struct GameView: View {
                 HStack {
                     MenuLogoView()
                     VStack {
-                        ScoreView(text: "得分", score: gameLogic.score)
+                        ScoreView(text: "得分", score: store.state.game.score)
                         Button(action: {
                             
                         }, label: {
@@ -29,9 +29,9 @@ struct GameView: View {
                         })
                     }
                     VStack {
-                        ScoreView(text: "最高分", score: gameLogic.score)
+                        ScoreView(text: "最高分", score: store.state.game.score)
                         Button(action: {
-                            gameLogic.restartAction()
+                            store.dispatch(GameRestartAction())
                         }, label: {
                             Text("新游戏")
                                 .font(.system(size: 15))
@@ -44,19 +44,27 @@ struct GameView: View {
                 }
                 .padding(.bottom, 20)
                 
-                BlockGridView(blocks: gameLogic.existBlocks, gridRows: gameLogic.gridRows)
+                BlockGridView(blocks: store.state.game.existBlocks, gridRows: store.state.game.gridRows)
                 
                 HStack(spacing: 10) {
-                    Button(action: gameLogic.upAction, label: {
+                    Button(action: {
+                        store.dispatch(GameUpAction())
+                    }, label: {
                         Text("👆")
                     })
-                    Button(action: gameLogic.downAction, label: {
+                    Button(action: {
+                        store.dispatch(GameDownAction())
+                    }, label: {
                         Text("👇")
                     })
-                    Button(action: gameLogic.leftAction, label: {
+                    Button(action: {
+                        store.dispatch(GameLeftAction())
+                    }, label: {
                         Text("👈")
                     })
-                    Button(action: gameLogic.rightAction, label: {
+                    Button(action: {
+                        store.dispatch(GameRightAction())
+                    }, label: {
                         Text("👉")
                     })
                 }
@@ -78,6 +86,6 @@ struct GameView: View {
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
         GameView()
-            .environmentObject(GameLogic())
+            .environmentObject(createStore())
     }
 }

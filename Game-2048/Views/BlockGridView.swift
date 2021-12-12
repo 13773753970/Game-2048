@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BlockGridView: View {
-    var blocks: [GameLogic.Block]
+    var blocks: [GameState.Block]
     var gridRows: Int
     var blockSize: CGFloat = 65
     var blockSpacing: CGFloat = 12
@@ -16,14 +16,14 @@ struct BlockGridView: View {
         CGFloat(gridRows) * (blockSize + blockSpacing) - blockSpacing
     }
     
-    func getBlockOffset(at: GameLogic.Block.AtPosition) -> CGPoint {
+    func getBlockOffset(at: GameState.Block.AtPosition) -> CGPoint {
         CGPoint(
             x: CGFloat(at.1) * (blockSize + blockSpacing),
             y: CGFloat(at.0) * (blockSize + blockSpacing)
         )
     }
     
-    func createBlockView(number: Int? = nil, at: GameLogic.Block.AtPosition) -> some View {
+    func createBlockView(number: Int? = nil, at: GameState.Block.AtPosition) -> some View {
         let offset = getBlockOffset(at: at)
         return BlockViewWithAnimation(number: number, blockSize: blockSize)
             .offset(x: offset.x, y: offset.y)
@@ -60,10 +60,10 @@ struct BlockGridView_Previews: PreviewProvider {
     static var previews: some View {
         BlockGridView(
             blocks: [
-                GameLogic.Block(id: 1, number: 2, at: (0, 0)),
-                GameLogic.Block(id: 2, number: 4, at: (0, 0)),
-                GameLogic.Block(id: 3, number: 2, at: (1, 2)),
-                GameLogic.Block(id: 4, number: 8, at: (2, 3)),
+                GameState.Block(id: 1, number: 2, at: (0, 0)),
+                GameState.Block(id: 2, number: 4, at: (0, 0)),
+                GameState.Block(id: 3, number: 2, at: (1, 2)),
+                GameState.Block(id: 4, number: 8, at: (2, 3)),
             ],
             gridRows: 4
         )

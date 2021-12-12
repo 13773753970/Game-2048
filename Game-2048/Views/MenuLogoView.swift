@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MenuLogoView: View {
-    @EnvironmentObject var gameLogic: GameLogic
+    @EnvironmentObject var store: AppStore
     
     var body: some View {
         ZStack {
@@ -32,7 +32,7 @@ struct MenuLogoView: View {
                 .font(.system(size: 33))
                 .bold()
             
-            Text("\(gameLogic.gridRows) x \(gameLogic.gridRows)")
+            Text("\(store.state.game.gridRows) x \(store.state.game.gridRows)")
                 .foregroundColor(.white)
                 .font(.system(size: 14))
                 .bold()
@@ -48,6 +48,6 @@ struct MenuLogoView: View {
 struct MenuLogoView_Previews: PreviewProvider {
     static var previews: some View {
         MenuLogoView()
-            .environmentObject(GameLogic())
+            .environmentObject(createStore())
     }
 }
