@@ -9,6 +9,30 @@ import SwiftUI
 
 struct GameView: View {
     @EnvironmentObject var store: AppStore
+    @Ref var ignoreGesture: Bool = false
+    
+    var gesture: some Gesture {
+        let threshold: CGFloat = 44
+        let drag = DragGesture()
+            .onChanged { v in
+                guard !self.ignoreGesture else { return }
+                guard abs(v.translation.width) > threshold || abs(v.translation.height) > threshold else { return }
+                self.ignoreGesture = true
+                if v.translation.width > threshold {
+                    store.dispatch(GameRightAction())
+                } else if v.translation.width < -threshold {
+                    store.dispatch(GameLeftAction())
+                } else if v.translation.height > threshold {
+                    store.dispatch(GameDownAction())
+                } else if v.translation.height < -threshold {
+                    store.dispatch(GameUpAction())
+                }
+            }
+            .onEnded { _ in
+                self.ignoreGesture = false
+            }
+        return drag
+    }
     
     var content: some View {
         GeometryReader { proxy in
@@ -45,29 +69,7 @@ struct GameView: View {
                 .padding(.bottom, 20)
                 
                 BlockGridView(blocks: store.state.game.existBlocks, gridRows: store.state.game.gridRows)
-                
-                HStack(spacing: 10) {
-                    Button(action: {
-                        store.dispatch(GameUpAction())
-                    }, label: {
-                        Text("👆")
-                    })
-                    Button(action: {
-                        store.dispatch(GameDownAction())
-                    }, label: {
-                        Text("👇")
-                    })
-                    Button(action: {
-                        store.dispatch(GameLeftAction())
-                    }, label: {
-                        Text("👈")
-                    })
-                    Button(action: {
-                        store.dispatch(GameRightAction())
-                    }, label: {
-                        Text("👉")
-                    })
-                }
+                    .gesture(gesture)
             }
             .frame(width: proxy.size.width, height: proxy.size.height, alignment: .center)
             .background(
