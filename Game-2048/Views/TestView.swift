@@ -157,8 +157,13 @@ struct ExampleView_Previews: PreviewProvider {
     }
 }
 
+struct User {
+    @Capitalized var name: String
+}
+
+
 @propertyWrapper struct UserDefaultsBacked<Value> {
-    var wrappedValue: Value? {
+    var wrappedValue: Value {
         get {
             let value = storage.value(forKey: key) as? Value
             return value ?? defaultValue
@@ -196,4 +201,3 @@ private protocol AnyOptional {
 extension Optional: AnyOptional {
     var isNil: Bool { self == nil}
 }
-

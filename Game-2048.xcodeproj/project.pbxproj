@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		403C0CED27B55D4B000683BD /* Redux in Frameworks */ = {isa = PBXBuildFile; productRef = 403C0CEC27B55D4B000683BD /* Redux */; };
 		40436BF02761D1C0009B97BA /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40436BEF2761D1C0009B97BA /* AppState.swift */; };
 		40436BF22761D256009B97BA /* RootReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40436BF12761D256009B97BA /* RootReducer.swift */; };
 		40436BF42761D265009B97BA /* GameReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40436BF32761D265009B97BA /* GameReducer.swift */; };
@@ -26,10 +27,10 @@
 		40E5234226E864A000A75201 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E5234126E864A000A75201 /* extension.swift */; };
 		40E5234426ECF4BF00A75201 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E5234326ECF4B600A75201 /* TestView.swift */; };
 		40E93F0627B22F8B00769173 /* propertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E93F0527B22F8B00769173 /* propertyWrapper.swift */; };
-		40FF38612761F7D2001A5273 /* Redux in Frameworks */ = {isa = PBXBuildFile; productRef = 40FF38602761F7D2001A5273 /* Redux */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		403C0CEA27B559B5000683BD /* Redux */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Redux; path = ../Redux; sourceTree = "<group>"; };
 		40436BEF2761D1C0009B97BA /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		40436BF12761D256009B97BA /* RootReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootReducer.swift; sourceTree = "<group>"; };
 		40436BF32761D265009B97BA /* GameReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameReducer.swift; sourceTree = "<group>"; };
@@ -58,13 +59,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				40436BF72761EEAD009B97BA /* SwiftyBeaver in Frameworks */,
-				40FF38612761F7D2001A5273 /* Redux in Frameworks */,
+				403C0CED27B55D4B000683BD /* Redux in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		403C0CE927B559B5000683BD /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				403C0CEA27B559B5000683BD /* Redux */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		403C0CEB27B55D4B000683BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		40436BEE2761D195009B97BA /* Redux */ = {
 			isa = PBXGroup;
 			children = (
@@ -79,8 +95,10 @@
 		40E5231B26E6565700A75201 = {
 			isa = PBXGroup;
 			children = (
+				403C0CE927B559B5000683BD /* Packages */,
 				40E5232626E6565700A75201 /* Game-2048 */,
 				40E5232526E6565700A75201 /* Products */,
+				403C0CEB27B55D4B000683BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,7 +175,7 @@
 			name = "Game-2048";
 			packageProductDependencies = (
 				40436BF62761EEAD009B97BA /* SwiftyBeaver */,
-				40FF38602761F7D2001A5273 /* Redux */,
+				403C0CEC27B55D4B000683BD /* Redux */,
 			);
 			productName = "Game-2048";
 			productReference = 40E5232426E6565700A75201 /* Game-2048.app */;
@@ -188,7 +206,6 @@
 			mainGroup = 40E5231B26E6565700A75201;
 			packageReferences = (
 				40436BF52761EEAD009B97BA /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
-				40FF385F2761F7D2001A5273 /* XCRemoteSwiftPackageReference "SwiftRedux" */,
 			);
 			productRefGroup = 40E5232526E6565700A75201 /* Products */;
 			projectDirPath = "";
@@ -431,26 +448,17 @@
 				minimumVersion = 1.9.0;
 			};
 		};
-		40FF385F2761F7D2001A5273 /* XCRemoteSwiftPackageReference "SwiftRedux" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/13773753970/SwiftRedux.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		403C0CEC27B55D4B000683BD /* Redux */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Redux;
+		};
 		40436BF62761EEAD009B97BA /* SwiftyBeaver */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 40436BF52761EEAD009B97BA /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
 			productName = SwiftyBeaver;
-		};
-		40FF38602761F7D2001A5273 /* Redux */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 40FF385F2761F7D2001A5273 /* XCRemoteSwiftPackageReference "SwiftRedux" */;
-			productName = Redux;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

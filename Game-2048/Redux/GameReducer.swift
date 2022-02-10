@@ -9,7 +9,11 @@ import Foundation
 import Redux
 
 struct GameState: Persistent {
-    struct Block: Identifiable, CustomStringConvertible, Codable {
+    struct Block: Identifiable, CustomStringConvertible, Codable, Equatable {
+        static func == (lhs: GameState.Block, rhs: GameState.Block) -> Bool {
+            lhs.id == rhs.id && lhs.number == rhs.number && lhs.at.0 == rhs.at.0 && lhs.at.1 == rhs.at.1
+        }
+        
         typealias AtPosition = (Int, Int)
         let id: Int
         var number: Int
@@ -43,7 +47,7 @@ struct GameState: Persistent {
             return "BLOCK(id: \(id), number: \(number), at: (\(at.0), \(at.1)))"
         }
     }
-    struct PersistedState: Codable {
+    struct PersistedState: Codable, Equatable {
         var id: Int
         var gridRows: Int
         var existBlocks: [Block]
